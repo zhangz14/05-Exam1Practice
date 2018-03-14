@@ -146,7 +146,7 @@ def problem0a(n):
            since (2 + 4 + 6) is 12, which is NOT odd.
     """
     # ------------------------------------------------------------------
-    # TODO: 2. Implement and test this function.
+    # DONE: 2. Implement and test this function.
     #          Tests have been written for you (above).
     #
     ####################################################################
@@ -163,10 +163,10 @@ def problem0a(n):
     #        Simply try a few examples to convince yourself of this.
     #        ASK FOR HELP if you do not understand this hint.
     # ------------------------------------------------------------------
-    sum = sum_of_digits(n)
-    if sum % 2 == 1:
+    sumd = sum_of_digits(n)
+    if sumd % 2 == 1:
         return True
-    if sum % 2 == 0:
+    if sumd % 2 == 0:
         return False
 
 
