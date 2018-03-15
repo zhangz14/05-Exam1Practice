@@ -128,13 +128,13 @@ def run_test_problem1a():
     expected = 1.135
     answer = problem1a(1, -2)
     print()
-    print('Test 3 expected:', expected, '(approximately')
+    print('Test 3 expected:', expected, '(approximately)')
     print('       actual:  ', answer)
 
-    expected = -0.84
-    answer = problem1a(5, 3)
+    expected = 0.063
+    answer = problem1a(2, 3)
     print()
-    print('Test 3 expected:', expected, '(approximately')
+    print('Test 3 expected:', expected, '(approximately)')
     print('       actual:  ', answer)
 
 
@@ -165,9 +165,10 @@ def problem1a(m, n):
     #    TIME ESTIMATE:   10 minutes.
     # ------------------------------------------------------------------
     total = 0
-    a = abs(n) ^ 2 - abs(m) + 1
+    a = n ^ 2 - m ^ 2 + 1
     for k in range(a):
         total = total + math.sin(k + m ^ 2)
+
     return total
 
 
