@@ -156,7 +156,7 @@ def problem1a(m, n):
       -- If m is 30 and n is 100, the correct answer is about 1.278.
     """
     # ------------------------------------------------------------------
-    # TODO: 3. Implement and test this function.
+    # DONE: 3. Implement and test this function.
     #   Note that you should write its TEST function first (above).
     # ------------------------------------------------------------------
     # ------------------------------------------------------------------
@@ -165,17 +165,16 @@ def problem1a(m, n):
     #    TIME ESTIMATE:   10 minutes.
     # ------------------------------------------------------------------
     total = 0
-    a = n ^ 2 - m ^ 2 + 1
-    for k in range(a):
-        total = total + math.sin(k + m ^ 2)
-
+    b = (n ** 2) - (m ** 2) + 1
+    for z in range(b):
+        total = total + math.sin((m ** 2) + z)
     return total
 
 
 def run_test_problem1b():
     """ Tests the   problem1b   function. """
     # ------------------------------------------------------------------
-    # TODO: 4. Implement this TEST function.
+    # DONE: 4. Implement this TEST function.
     #   It TESTS the  problem1b  function defined below.
     #   Include at least **   4   ** tests.
     # ------------------------------------------------------------------
@@ -188,6 +187,29 @@ def run_test_problem1b():
     print('--------------------------------------------------')
     print('Testing the   problem1b   function:')
     print('--------------------------------------------------')
+    expected = 5
+    answer = problem1b(3, 5)
+    print()
+    print('Test 1 expected:', expected)
+    print('         actual:', answer)
+
+    expected = 1
+    answer = problem1b(2, 1)
+    print()
+    print('Test 2 expected:', expected)
+    print('         actual:', answer)
+
+    expected = 44
+    answer = problem1b(5, 40)
+    print()
+    print('Test 3 expected:', expected)
+    print('         actual:', answer)
+
+    expected = 3
+    answer = problem1b(7, 2)
+    print()
+    print('Test 4 expected:', expected)
+    print('         actual:', answer)
 
 
 def problem1b(m, f):
@@ -207,7 +229,7 @@ def problem1b(m, f):
            since there are 44 primes between 5 and 200.
      """
     # ------------------------------------------------------------------
-    # TODO: 5. Implement and test this function.
+    # DONE: 5. Implement and test this function.
     #   Note that you should write its TEST function first (above).
     #
     ####################################################################
@@ -220,6 +242,12 @@ def problem1b(m, f):
     #    DIFFICULTY:      5
     #    TIME ESTIMATE:   10 to 15 minutes.
     # ------------------------------------------------------------------
+    count = 0
+    a = f * m - m
+    for k in range(a + 1):
+        if is_prime(m + k) is True:
+            count = count + 1
+    return count
 
 
 def run_test_problem1c():
@@ -304,7 +332,7 @@ def problem1c(n):
            and the sum of the digits in 223092870 is 33.
     """
     # ------------------------------------------------------------------
-    # TODO: 6. Implement and test this function.
+    # DONE: 6. Implement and test this function.
     #          Tests have been written for you (above).
     #
     ####################################################################
@@ -318,6 +346,12 @@ def problem1c(n):
     #    DIFFICULTY:      7
     #    TIME ESTIMATE:   15 to 20 minutes.
     # ------------------------------------------------------------------
+    total_product = 1
+    b = n - 2 + 1
+    for j in range(b):
+        if is_prime(2 + j) is True:
+            total_product = total_product * (2 + j)
+    return sum_of_digits(total_product)
 
 
 # ----------------------------------------------------------------------
